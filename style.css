@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    /*### Primary*/
+
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /*##Gradients*/
+  --Light-slate-blue: hsl(252, 100%, 67%); /*(background)*/
+  --Light-royal-blue: hsl(241, 81%, 54%); /*(background)*/
+
+  --Violet-blue: hsla(256, 72%, 46%, 1); /*(circle)*/
+  --Persian-blue: hsla(241, 72%, 46%, 0); /*(circle)*/
+
+   /*### Neutral*/
+
+  --White: hsl(0, 0%, 100%); 
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--Pale-blue);
+  font-family: "Hanken Grotesk", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.15rem;
+  min-height: 100vh;
+}
+
+.container{
+  max-width: 600px;
+  max-height: 700px;
+}
+
+@media(min-width: 600px){
+  .container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+     width: 100%;
+  }
+}
+
+.container article:first-child{
+  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding:0 1rem 0 1rem;
+  color: var(--White);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(46, 43,233);
+  background: linear-gradient(360deg, rgba(46, 43, 233, 1) 15%, rgba(120, 87, 255, 0.9260154745491946) 91%);
+}
+
+.container p{
+  text-align: center; 
+  font-size: 18px;
+  padding-bottom: 2rem;
+}
+
+.container h1{
+  font-size: 45px;
+  padding-top: 2rem;
+  box-shadow: inset;
+  padding-left: 2.2rem;
+}
+
+.container h2{
+  font-size: 25px;
+  padding: 1rem;
+}
+
+.container .result{
+  display: block;
+  line-height: 1;
+  aspect-ratio: 1/1;
+  border-radius: 50% ;
+  background:rgb(78, 33, 202);
+  background: linear-gradient(360deg, rgba(78, 33, 202, 1) 17%, rgba(36, 33, 202, 1) 96%);
+}
+
+.result p{
+  font-size: 11px;
+}
+
+.container article:last-child{
+  background-color: var(--White);
+  border-radius:0 0.625rem 0.625rem 0;
+  box-shadow: 7px 5px 23px -8px rgba(189,179,227,1);
+  -webkit-box-shadow: 7px 5px 23px -8px rgba(189,179,227,1);
+  -moz-box-shadow: 7px 5px 23px -8px rgba(189,179,227,1);
+  
+  margin-left: -13px;
+  z-index: -1;
+}
+
+.container h5{
+  font-size: 20px;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  columns: var(--Dark-gray-blue);
+  margin-left: 1rem;
+}
+
+.stats-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+  width: 250px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 1rem;
+}
+
+.stat p{
+  padding: 0;
+}
+
+.stat-text {
+  display: flex;
+  align-items: center;
+}
+
+.stat-text p{
+  padding-left: 9px;
+}
+
+.light-text{
+  color: var(--Dark-gray-blue);
+  opacity: .5;
+}
+
+.dark-text{
+  font-weight: 700;
+  color: var(--Dark-gray-blue);
+}
+
+#reaction{
+  color: var(--Light-red);
+  background-color: #FFF6F5;
+  font-weight: 500;
+  height: 2.5rem;
+}
+
+#memory{
+  color: var(--Orangey-yellow);
+  background-color: #FFFBF2;
+  font-weight: 500;
+  height: 2rem;
+}
+
+#verbal{
+  color: var(--Green-teal);
+  background-color: #F3FAFA;
+  font-weight: 500;
+  height: 2rem;
+}
+
+#visual{
+  color: var(--Cobalt-blue);
+  background-color: #F3F3FD;
+  font-weight: 500;
+  height: 2rem;
+}
+
+.btn-container{
+  text-align: center;
+  padding-bottom: 2rem;
+
+}
+
+#btn{
+  width: 250px;
+  height: 50px;
+  border: none;
+  background-color: #303b5a;
+  color: var(--White);
+  border-radius: 30px;
+  cursor: pointer;
+  justify-content: center;
+  transition: all .2s ease-in;
+}
+
+#btn:hover{
+  background:rgb(78, 33, 202);
+  background: linear-gradient(360deg, rgba(78, 33, 202, 1) 17%, rgba(36, 33, 202, 1) 96%);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: 2rem;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
